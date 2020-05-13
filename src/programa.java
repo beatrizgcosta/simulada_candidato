@@ -60,6 +60,48 @@ public class programa {
 		System.out.printf("%nPontos por escolaridade: %d%n", esc);
 		System.out.println("Pontos por experiência: " + experiencia);
 		
+		//FINALIZAÇÃO
+		if(habilitacao == 'S' || habilitacao == 's'&& esc >= 20) {
+			if(experiencia >= 10 && esc >= 30) {
+				if(viagem == 'S'|| viagem == 's' && experiencia >= 40 && esc >= 30) {
+					System.out.printf("%nVocê está habilitado para o(s) seguinte(s) cargo(s):%n");
+					System.out.println("ASSISTENTE");
+					System.out.println("GERENTE");
+					System.out.println("ANALISTA");
+				}else {
+					System.out.printf("%nVocê está habilitado para o(s) seguinte(s) cargo(s):%n");
+					System.out.println("ASSISTENTE");
+					System.out.println("GERENTE");
+				}
+			} else {
+				if(viagem == 'S' || viagem == 's' && experiencia >= 40 && esc >= 30) {
+					System.out.printf("%nVocê está habilitado para o(s) seguinte(s) cargo(s):%n");
+					System.out.println("ASSISTENTE");
+					System.out.println("ANALISTA");	
+				}else {
+					System.out.printf("%nVocê está habilitado para o(s) seguinte(s) cargo(s):%n");
+					System.out.println("ASSISTENTE");
+				}
+			}
+		}else{
+			if(experiencia >= 10 && esc >= 30) {
+				if(viagem == 'S' || viagem == 's' && experiencia >= 40 && esc >= 30) {
+					System.out.printf("%nVocê está habilitado para o(s) seguinte(s) cargo(s):%n");
+					System.out.println("GERENTE");
+					System.out.println("ANALISTA");
+				}else {
+					System.out.printf("%nVocê está habilitado para o(s) seguinte(s) cargo(s):%n");
+					System.out.println("GERENTE");
+				}
+			}else {
+				if(viagem == 'S'|| viagem == 's' && experiencia >= 40 && esc >= 30) {
+					System.out.printf("%nVocê está habilitado para o(s) seguinte(s) cargo(s):%n");
+					System.out.println("ANALISTA");
+				}else {
+					System.out.printf("%nInfelizmente seu perfil não atende a empresa%n");
+				}			
+			}
+		}
 		sc.close();
 	}
 
