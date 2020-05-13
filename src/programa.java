@@ -9,7 +9,8 @@ public class programa {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		int escolaridade;
+		int escolaridade, anos;
+		char viagem, habilitacao;
 		
 		// LEITURA DA ESCOLARIDADE
 		System.out.println("Qual sua escolaridade?");
@@ -19,6 +20,14 @@ public class programa {
 		System.out.println("4) Pós-graduação");
 		System.out.printf("Digite uma opção: ");
 		escolaridade = sc.nextInt();
+		
+		// LEITURA DOS OUTROS DADOS
+		System.out.printf("%nVocê tem quantos anos de experiência profissional? ");
+		anos = sc.nextInt();
+		System.out.printf("Você tem disponibilidade para viajar (S/N)? ");
+		viagem = sc.next().charAt(0);
+		System.out.printf("Você tem habilitação de motorista (S/N)? ");
+		habilitacao = sc.next().charAt(0);
 		
 		sc.close();
 	}
