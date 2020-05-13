@@ -9,7 +9,7 @@ public class programa {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		int escolaridade, anos;
+		int escolaridade, anos, esc, experiencia;
 		char viagem, habilitacao;
 		
 		// LEITURA DA ESCOLARIDADE
@@ -28,6 +28,37 @@ public class programa {
 		viagem = sc.next().charAt(0);
 		System.out.printf("Você tem habilitação de motorista (S/N)? ");
 		habilitacao = sc.next().charAt(0);
+		
+		
+		//calculo da experiencia e escolaridade
+		if(escolaridade == 1) {
+			esc = 10;
+		} else {
+			if(escolaridade == 2) {
+				esc = 20;
+			} else {
+				if(escolaridade == 3) {
+					esc = 30;
+				}else {
+					esc = 40;
+				}
+			}
+		}
+		if(anos == 0) {
+			experiencia = 0; 
+		} else {
+			if(anos > 0 && anos <= 2) {
+				experiencia = 10;
+			}else {
+				if(anos > 2 && anos <= 5) {
+					experiencia = 20;
+				}else {
+					experiencia = 40;
+				}
+			}
+		}
+		System.out.printf("%nPontos por escolaridade: %d%n", esc);
+		System.out.println("Pontos por experiência: " + experiencia);
 		
 		sc.close();
 	}
